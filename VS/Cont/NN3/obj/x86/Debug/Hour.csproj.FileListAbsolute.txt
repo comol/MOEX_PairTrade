@@ -1,0 +1,5 @@
+C:\Program Files (x86)\TSLab 1.2\Handlers\Hour.dll
+C:\Program Files (x86)\TSLab 1.2\Handlers\Hour.pdb
+Z:\Matlab_Functions\VS\Hour\NN3\obj\x86\Debug\Hour.dll
+Z:\Matlab_Functions\VS\Hour\NN3\obj\x86\Debug\Hour.pdb
+Z:\Matlab_Functions\VS\Hour\NN3\obj\x86\Debug\Hour.csprojResolveAssemblyReference.cache

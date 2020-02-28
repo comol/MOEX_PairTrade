@@ -1,0 +1,10 @@
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\bin\Debug\ContinueHour.dll
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\bin\Debug\ContinueHour.pdb
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\bin\Debug\NNLib12.dll
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\bin\Debug\TSLab.DataSource.dll
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\bin\Debug\TSLab.Script.dll
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\bin\Debug\TSLab.Script.Handlers.dll
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\obj\Debug\ContinueHour.dll
+Z:\Биржа\ReadyBots\Парный трейдинг\Вариант 1 (классический скрипт, часоивик)\VS\Cont\NN3\obj\Debug\ContinueHour.pdb
+C:\Program Files (x86)\TSLab 1.2\Handlers\ContinueHour.dll
+C:\Program Files (x86)\TSLab 1.2\Handlers\ContinueHour.pdb

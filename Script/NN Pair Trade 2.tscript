@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExportScriptData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Code><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<GraphDataBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="GraphViewData">
+  <EditData VersionString="2.2" TemplateClass="Script">
+    <ViewModel>
+      <Model>
+        <Block Key="SBRF" Category="SECURITY" Location="-49.888888888888886 26.666666666666671" TypeName="SecuritySourceItem">
+          <EditItem CodeName="SBRF" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" />
+        </Block>
+        <Block Key="ЛогичесФормула1" Category="Formula" Location="673.00000000000023 132.88888888888891" TypeName="BoolCustomHandlerItem" Width="160" Height="40.74" OpenParams="true">
+          <EditItem CodeName="ЛогичесФормула1" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.26.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="(((NNLinreg1 - CloseCurrent) / NNLinreg1) * 100) &gt; DiffProcent" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CloseCurrent" Category="Usual" Location="493.40333333333331 144.11111111111114" TypeName="ConverterItem">
+          <EditItem CodeName="CloseCurrent" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.24.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="ОткрытиеДлинной" Category="Usual" Location="950.73666666666622 77.444444444444429" TypeName="OpenPositionByMarketItem">
+          <EditItem CodeName="ОткрытиеДлинной" IsParametersVisible="false" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Shares" TypeName="Double" Value="1" />
+              <Parameter Name="Long" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="DiffProcent" Category="Usual" Location="449 1002.6666666666667" TypeName="ConverterItem">
+          <EditItem CodeName="DiffProcent" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.24.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="ЛогичесФормула3" Category="Formula" Location="672 328.66666666666674" TypeName="BoolCustomHandlerItem" Width="160" Height="40.74" OpenParams="true">
+          <EditItem CodeName="ЛогичесФормула3" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.26.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="(((NNLinreg1 - CloseCurrent) / NNLinreg1) * 100) &lt; (-1*DiffProcent)" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="ЗакрытиеДлинной" Category="Usual" Location="1227 82.039999999999992" TypeName="ClosePositionByMarketItem">
+          <EditItem CodeName="ЗакрытиеДлинной" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" />
+        </Block>
+        <Block Key="BR" Category="SECURITY" Location="-35 202.03999999999996" TypeName="SecuritySourceItem">
+          <EditItem CodeName="BR" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="NNLinreg1" Category="Usual" Location="505 514.04" TypeName="TwoOrMoreInputsItem">
+          <EditItem CodeName="NNLinreg1" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="NN3.NN3Class, NN3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseBR" Category="Usual" Location="215 203.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="CloseBR" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Eu" Category="SECURITY" Location="-33 316" TypeName="SecuritySourceItem">
+          <EditItem CodeName="Eu" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="GAZR" Category="SECURITY" Location="-29 402" TypeName="SecuritySourceItem">
+          <EditItem CodeName="GAZR" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="GMKR" Category="SECURITY" Location="-29 475" TypeName="SecuritySourceItem">
+          <EditItem CodeName="GMKR" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="GOLD" Category="SECURITY" Location="-26 555" TypeName="SecuritySourceItem">
+          <EditItem CodeName="GOLD" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="LKOH" Category="SECURITY" Location="-22 641" TypeName="SecuritySourceItem">
+          <EditItem CodeName="LKOH" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="MGNT" Category="SECURITY" Location="-21 730" TypeName="SecuritySourceItem">
+          <EditItem CodeName="MGNT" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CloseEu" Category="Usual" Location="211 314" TypeName="ConverterItem">
+          <EditItem CodeName="CloseEu" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseGAZR" Category="Usual" Location="216 397" TypeName="ConverterItem">
+          <EditItem CodeName="CloseGAZR" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseGMKR" Category="Usual" Location="215 474" TypeName="ConverterItem">
+          <EditItem CodeName="CloseGMKR" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseGOLD" Category="Usual" Location="209 554" TypeName="ConverterItem">
+          <EditItem CodeName="CloseGOLD" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseLKOH" Category="Usual" Location="213 638" TypeName="ConverterItem">
+          <EditItem CodeName="CloseLKOH" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseMGNT" Category="Usual" Location="211 725" TypeName="ConverterItem">
+          <EditItem CodeName="CloseMGNT" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="MIX" Category="SECURITY" Location="-17 808" TypeName="SecuritySourceItem">
+          <EditItem CodeName="MIX" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="ROSN" Category="SECURITY" Location="-18 885" TypeName="SecuritySourceItem">
+          <EditItem CodeName="ROSN" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="RTS" Category="SECURITY" Location="-13 949" TypeName="SecuritySourceItem">
+          <EditItem CodeName="RTS" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="Si" Category="SECURITY" Location="-14 1017" TypeName="SecuritySourceItem">
+          <EditItem CodeName="Si" IsParametersVisible="false" OnlyValueHandlersCanUsed="false">
+            <Parameters>
+              <Parameter Name="NotTradable" TypeName="Boolean" Value="true" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CloseMIX" Category="Usual" Location="211 807.66666666666663" TypeName="ConverterItem">
+          <EditItem CodeName="CloseMIX" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseROSN" Category="Usual" Location="212 882.66666666666663" TypeName="ConverterItem">
+          <EditItem CodeName="CloseROSN" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseRTS" Category="Usual" Location="211 954.66666666666663" TypeName="ConverterItem">
+          <EditItem CodeName="CloseRTS" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CloseSi" Category="Usual" Location="201 1019.6666666666667" TypeName="ConverterItem">
+          <EditItem CodeName="CloseSi" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.25.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="ОткрытиеКороткой" Category="Usual" Location="942.11111111111109 520" TypeName="OpenPositionByMarketItem">
+          <EditItem CodeName="ОткрытиеКороткой" IsParametersVisible="false" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Shares" TypeName="Double" Value="1" />
+              <Parameter Name="Long" TypeName="Boolean" Value="false" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="ЗакрытиеКороткой" Category="Usual" Location="1239.1111111111111 515" TypeName="ClosePositionByMarketItem">
+          <EditItem CodeName="ЗакрытиеКороткой" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" />
+        </Block>
+        <Block Key="ТрейлСтопДлинной" Category="Usual" Location="1176.1111111111111 212" TypeName="ConverterItem">
+          <EditItem CodeName="ТрейлСтопДлинной" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.TrailStop, TSLab.Script.Handlers, Version=1.2.26.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="UseCalcPrice" TypeName="Boolean" Value="false" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="ТрейлСтопКороткой" Category="Usual" Location="1179.1111111111111 711" TypeName="ConverterItem">
+          <EditItem CodeName="ТрейлСтопКороткой" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.TrailStop, TSLab.Script.Handlers, Version=1.2.26.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="UseCalcPrice" TypeName="Boolean" Value="false" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="ЗакПозПоStoLos1" Category="Usual" Location="1387.1111111111111 240" TypeName="ClosePositionByStopItem">
+          <EditItem CodeName="ЗакПозПоStoLos1" IsParametersVisible="false" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Slippage" TypeName="Double" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="ЗакПозПоStoLos2" Category="Usual" Location="1386.1111111111111 756" TypeName="ClosePositionByStopItem">
+          <EditItem CodeName="ЗакПозПоStoLos2" IsParametersVisible="false" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Slippage" TypeName="Double" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Link From="CloseCurrent" To="ЛогичесФормула1" FromPort="Out" ToPortNum="1" />
+        <Link From="ЛогичесФормула1" To="ОткрытиеДлинной" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="SBRF" To="ОткрытиеДлинной" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="CloseCurrent" To="ЛогичесФормула3" FromPort="Out" ToPortNum="1" />
+        <Link From="SBRF" To="CloseCurrent" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ОткрытиеДлинной" To="ЗакрытиеДлинной" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+        <Link From="ЛогичесФормула3" To="ЗакрытиеДлинной" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="NNLinreg1" To="ЛогичесФормула1" FromPort="Out" ToPortNum="0" />
+        <Link From="NNLinreg1" To="ЛогичесФормула3" FromPort="Out" ToPortNum="0" />
+        <Link From="BR" To="CloseBR" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Eu" To="CloseEu" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="GAZR" To="CloseGAZR" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="GMKR" To="CloseGMKR" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="GOLD" To="CloseGOLD" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="LKOH" To="CloseLKOH" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="MGNT" To="CloseMGNT" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="MIX" To="CloseMIX" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ROSN" To="CloseROSN" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="RTS" To="CloseRTS" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Si" To="CloseSi" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="CloseBR" To="NNLinreg1" FromPort="Out" ToPort="1" ToPortNum="0" />
+        <Link From="CloseEu" To="NNLinreg1" FromPort="Out" ToPort="2" ToPortNum="1" />
+        <Link From="CloseGAZR" To="NNLinreg1" FromPort="Out" ToPort="3" ToPortNum="2" />
+        <Link From="CloseGMKR" To="NNLinreg1" FromPort="Out" ToPort="4" ToPortNum="3" />
+        <Link From="CloseGOLD" To="NNLinreg1" FromPort="Out" ToPort="5" ToPortNum="4" />
+        <Link From="CloseLKOH" To="NNLinreg1" FromPort="Out" ToPort="6" ToPortNum="5" />
+        <Link From="CloseMGNT" To="NNLinreg1" FromPort="Out" ToPort="7" ToPortNum="6" />
+        <Link From="CloseMIX" To="NNLinreg1" FromPort="Out" ToPort="8" ToPortNum="7" />
+        <Link From="CloseROSN" To="NNLinreg1" FromPort="Out" ToPort="9" ToPortNum="8" />
+        <Link From="CloseRTS" To="NNLinreg1" FromPort="Out" ToPort="10" ToPortNum="9" />
+        <Link From="CloseSi" To="NNLinreg1" FromPort="Out" ToPort="11" ToPortNum="10" />
+        <Link From="SBRF" To="ОткрытиеКороткой" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ЛогичесФормула3" To="ОткрытиеКороткой" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="ОткрытиеКороткой" To="ЗакрытиеКороткой" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+        <Link From="ЛогичесФормула1" To="ЗакрытиеКороткой" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="ОткрытиеКороткой" To="ТрейлСтопКороткой" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ОткрытиеДлинной" To="ТрейлСтопДлинной" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ОткрытиеКороткой" To="ЗакПозПоStoLos2" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+        <Link From="ТрейлСтопКороткой" To="ЗакПозПоStoLos2" FromPort="Out" ToPort="Prc" ToPortNum="2" />
+        <Link From="ТрейлСтопДлинной" To="ЗакПозПоStoLos1" FromPort="Out" ToPort="Prc" ToPortNum="2" />
+        <Link From="ОткрытиеДлинной" To="ЗакПозПоStoLos1" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+      </Model>
+    </ViewModel>
+  </EditData>
+  <Options xsi:type="LabOptions">
+    <BarSize>8</BarSize>
+    <Indent>0</Indent>
+    <HideValues>false</HideValues>
+    <IntervalBase>MINUTE</IntervalBase>
+    <Interval>1</Interval>
+    <RecalcInterval>INTERVAL</RecalcInterval>
+    <DateFrom>0001-01-01T00:00:00</DateFrom>
+    <UseDateFrom>false</UseDateFrom>
+    <DateTo>2016-05-24T00:02:00</DateTo>
+    <UseDateTo>false</UseDateTo>
+    <MaxDays>0</MaxDays>
+    <SessionBegin>2000-01-01T00:00:00</SessionBegin>
+    <SessionEnd>2000-01-01T00:00:00</SessionEnd>
+    <DecompressMethod>Method1</DecompressMethod>
+    <TradeFromBar>0</TradeFromBar>
+    <MaxCandels>0</MaxCandels>
+    <RtUpdates>false</RtUpdates>
+    <CalcForEachSecurity>true</CalcForEachSecurity>
+    <NotUsePositions>false</NotUsePositions>
+    <InitDeposit>0</InitDeposit>
+    <LabCalcType>Default</LabCalcType>
+    <TradeMode>All</TradeMode>
+    <SaveLayout>false</SaveLayout>
+  </Options>
+  <Mappings>
+    <Sources>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.SBRF_140101_160515" Name="SBRF">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.BR_140101_160515" Name="BR">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.EU_140101_160515" Name="Eu">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.GAZR_140101_160515" Name="GAZR">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.GMKR_140101_160515" Name="GMKR">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.GOLD_140101_160515" Name="GOLD">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.LKOH_140101_160515" Name="LKOH">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.MGNT_140101_160515" Name="MGNT">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.MIX_140101_160515" Name="MIX">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.ROSN_140101_160515" Name="ROSN">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.RTS_140101_160515" Name="RTS">
+        <Records />
+      </Source>
+      <Source DataSourceName="Парный трейдинг" SecurityId="SPFB.SI_140101_160515" Name="Si">
+        <Records />
+      </Source>
+    </Sources>
+    <Parameters>
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="DiffProcent" CodeName="DiffProcent_Value" Visible="true" UsedInOptimization="false" Value="0.07" TypeName="Double" MinValue="0" MaxValue="1.5" Step="0.01" />
+      <Parameter xsi:type="OptimData" Name="Стоп лосс" InvariantName="StopLoss" ItemName="ТрейлСтопДлинной" CodeName="ТрейлСтопДлинной_StopLoss" Visible="true" UsedInOptimization="false" Value="2.2" TypeName="Double" MinValue="0.1" MaxValue="5" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Вкл. трейл" InvariantName="TrailEnable" ItemName="ТрейлСтопДлинной" CodeName="ТрейлСтопДлинной_TrailEnable" Visible="true" UsedInOptimization="false" Value="5.4" TypeName="Double" MinValue="0.1" MaxValue="10" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Трейл лосс" InvariantName="TrailLoss" ItemName="ТрейлСтопДлинной" CodeName="ТрейлСтопДлинной_TrailLoss" Visible="true" UsedInOptimization="false" Value="2.4" TypeName="Double" MinValue="0.1" MaxValue="10" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Стоп лосс" InvariantName="StopLoss" ItemName="ТрейлСтопКороткой" CodeName="ТрейлСтопКороткой_StopLoss" Visible="true" UsedInOptimization="false" Value="2.2" TypeName="Double" MinValue="0.1" MaxValue="5" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Вкл. трейл" InvariantName="TrailEnable" ItemName="ТрейлСтопКороткой" CodeName="ТрейлСтопКороткой_TrailEnable" Visible="true" UsedInOptimization="false" Value="5.4" TypeName="Double" MinValue="0.1" MaxValue="3" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Трейл лосс" InvariantName="TrailLoss" ItemName="ТрейлСтопКороткой" CodeName="ТрейлСтопКороткой_TrailLoss" Visible="true" UsedInOptimization="false" Value="2.4" TypeName="Double" MinValue="0.1" MaxValue="3" Step="0.1" />
+    </Parameters>
+  </Mappings>
+  <Iterations>500</Iterations>
+  <OptParametersRecords>
+    <OptParametersRecord>
+      <Mappings>
+        <Sources>
+          <Source DataSourceName="SB1H" SecurityId="SBER_100101_151101" Name="SberSource">
+            <Records />
+          </Source>
+        </Sources>
+        <Parameters>
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="DiffProcent" CodeName="DiffProcent_Value" Visible="true" UsedInOptimization="true" Value="1" TypeName="Double" MinValue="1" MaxValue="5" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="CloseBars" CodeName="CloseBars_Value" Visible="true" UsedInOptimization="false" Value="2" TypeName="Double" MinValue="0" MaxValue="3" Step="1" />
+        </Parameters>
+      </Mappings>
+      <Comment>1</Comment>
+      <Created>2015-12-25T10:03:11.3595658+03:00</Created>
+    </OptParametersRecord>
+    <OptParametersRecord>
+      <Mappings>
+        <Sources>
+          <Source DataSourceName="SB1H" SecurityId="SBER_100101_151101" Name="SberSource">
+            <Records />
+          </Source>
+        </Sources>
+        <Parameters>
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="DiffProcent" CodeName="DiffProcent_Value" Visible="true" UsedInOptimization="false" Value="2.5" TypeName="Double" MinValue="1" MaxValue="5" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="CloseBars" CodeName="CloseBars_Value" Visible="true" UsedInOptimization="true" Value="0" TypeName="Double" MinValue="0" MaxValue="5" Step="1" />
+        </Parameters>
+      </Mappings>
+      <Comment>2</Comment>
+      <Created>2015-12-25T11:00:04.7472177+03:00</Created>
+    </OptParametersRecord>
+  </OptParametersRecords>
+</GraphDataBase>]]></Code>
+  <Settings2><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<LabSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RealtimeSettings>
+    <Options>
+      <DefEntryApprove>false</DefEntryApprove>
+      <DefExitApprove>false</DefExitApprove>
+      <AutoEntryBars>0</AutoEntryBars>
+      <AutoCloseBars>0</AutoCloseBars>
+      <Slippage>0</Slippage>
+      <SlippagePct>0</SlippagePct>
+      <TakeProfitNoSlippage>false</TakeProfitNoSlippage>
+      <OpenPositionNoSlippage>false</OpenPositionNoSlippage>
+      <ByMarketAsLimt>false</ByMarketAsLimt>
+      <InvalidStopsByMarket>false</InvalidStopsByMarket>
+      <RemoveInactivePositions>true</RemoveInactivePositions>
+      <WarnSkippedOpenPositions>true</WarnSkippedOpenPositions>
+      <NotOpenIfHasSkippedExit>false</NotOpenIfHasSkippedExit>
+      <NoCalcInfo>false</NoCalcInfo>
+      <MaxBarsForSignal>0</MaxBarsForSignal>
+      <WaitExecutionExitBars>0</WaitExecutionExitBars>
+      <WaitExecutionEntryBars>0</WaitExecutionEntryBars>
+      <SimulatePositionOrdering>true</SimulatePositionOrdering>
+    </Options>
+    <AppearanceOptions>
+      <Background>
+        <A>255</A>
+        <R>245</R>
+        <G>245</G>
+        <B>245</B>
+        <ScA>1</ScA>
+        <ScR>0.913098633</ScR>
+        <ScG>0.913098633</ScG>
+        <ScB>0.913098633</ScB>
+      </Background>
+      <Foreground>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Foreground>
+      <ShowCaption>true</ShowCaption>
+      <FontSize>11</FontSize>
+    </AppearanceOptions>
+  </RealtimeSettings>
+</LabSettings>]]></Settings2>
+</ExportScriptData>
